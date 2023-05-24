@@ -1,0 +1,26 @@
+#display 
+{
+	float: right; 
+}
+#pics 
+{
+	float: left;
+}
+.text
+{
+	margin: 12px;
+	width: 200px;
+}
+select
+{
+	margin: 12px;
+}
+#errorMessage
+{
+	color: red;
+}
+#picsholder
+{
+	height: 700px;          
+
+}         
