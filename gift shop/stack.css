@@ -1,0 +1,22 @@
+.slideshow {
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    height: 312px!important;
+}
+.slideshow img {
+    width: 100px;
+    height: 100px;
+    padding: 2px;
+}
+div.responsive img {
+    width: auto;
+    height: auto
+}
+.cycle-pager {
+    position: static;
+    margin-top: 5px
+}  
+div.vertical {
+    width: 100px
+}

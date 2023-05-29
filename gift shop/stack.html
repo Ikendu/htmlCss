@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="stack.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://malsup.github.io/jquery.cycle2.js"></script>
+	<script src="http://malsup.github.io/jquery.cycle2.carousel.js"></script>
+	<title>slide</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var paused = false,
+    interval = setInterval(function() {
+      (!paused) && $('#next3').trigger('click');
+    },3000);
+$('.slideshow, .controls').hover(function() {
+  paused = true;
+},function() {
+  paused = false;
+});
+	</script>
+	<script>
+    $.fn.cycle.defaults.autoSelector = '.slideshow';
+</script>
+<div class="slideshow vertical" data-cycle-fx=carousel data-cycle-timeout=0 data-cycle-next="#next3" data-cycle-prev="#prev3" data-cycle-carousel-visible=2 data-cycle-carousel-vertical=true>
+    <img src="http://malsup.github.io/images/beach1.jpg">
+    <img src="http://malsup.github.io/images/beach2.jpg">
+    <img src="http://malsup.github.io/images/beach3.jpg">
+    <img src="http://malsup.github.io/images/beach4.jpg">
+    <img src="http://malsup.github.io/images/beach5.jpg">
+    <img src="http://malsup.github.io/images/beach9.jpg">
+</div>
+<div class="center">
+    <button id="prev3">∧ Prev</button>
+    <button id="next3">∨ Next</button>
+</div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+img{
+	width: 100%;
+	height: 100%;
+}
+i{
+	color: #0E5C0A;
+	font-size: 3rem;
+	pointer-events: auto;
+	cursor: pointer;
+}
+i:hover{
+	color: #16EE0B;
+}
+.slide1{
+	position: absolute;
+	left: 10%;
+	top: 20%;
+	width: 80%;
+	height: 300px;
+	overflow: hidden;
+}
+
+.slider-inner{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 200%;
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	gap: 5px;
+	pointer-events: none;
+}

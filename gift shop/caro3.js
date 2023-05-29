@@ -19,7 +19,7 @@
       var currentPosition = getPositionX(e);
       var diff = currentPosition - startPosition;
       currentTranslate = diff;
-      container.css('transform', 'translateX(' + currentTranslate + 'px)');
+      container.css('transform', 'translateX( + currentTranslate + 'px')');
     });
   
     container.on('mouseup touchend', function() {
