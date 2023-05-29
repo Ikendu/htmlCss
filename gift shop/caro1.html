@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="caro1.css">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <title>caro</title>
+</head>
+<body>
+ <div class="carousel-container">
+  <div class="carousel">
+    <div class="carousel-item">
+      <div class="d-block w-90" id="first" >
+        <img src="image/main.jpg" alt="" class="image11" >
+          <img src="image/b.jpg"  alt="..." class="image11">
+          <img src="image/a.jpg"  alt="..." class="image11">
+          <img src="image/b.jpg"  alt="..." class="image11">
+        </div>
+    </div>
+    <div class="carousel-item">Item 2</div>
+    <div class="carousel-item">Item 3</div>
+   
+   
+    <!-- Add more carousel items as needed -->
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function() {
+    // Select the carousel container
+    var container = $('.carousel-container');
+
+    // Initialize variables for tracking dragging state
+    var isDragging = false;
+    var startPosition = 0;
+    var currentTranslate = 0;
+  
+    // Add event listeners for touch/mouse events
+    container.on('mousedown touchstart', function(e) {
+      isDragging = true;
+      startPosition = getPositionX(e);
+      currentTranslate = 0;
+    });
+  
+    container.on('mousemove touchmove', function(e) {
+      if (!isDragging) return;
+      var currentPosition = getPositionX(e);
+      var diff = currentPosition - startPosition;
+      currentTranslate = diff;
+      container.css('transform', 'translateX(' + currentTranslate + 'px)');
+    });
+  
+    container.on('mouseup touchend', function() {
+      isDragging = false;
+      container.css('transform', 'translateX(0)');
+    });
+  
+    // Helper function to get the horizontal position
+    function getPositionX(event) {
+      return event.type.includes('mouse') ? event.pageX : event.originalEvent.touches[0].clientX;
+    }
+  });
+</script>
+</body>
+</html>

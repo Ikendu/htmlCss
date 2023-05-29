@@ -1,0 +1,16 @@
+.carousel-container {
+  width: 400px; /* Adjust width as needed */
+  height: 300px; /* Adjust height as needed */
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex; /* Ensures items are in a row */
+  width: fit-content; /* Ensures the carousel expands as needed */
+}
+
+.carousel-item {
+  width: 100%; /* Adjust width as needed */
+  height: 100%; /* Adjust height as needed */
+  flex-shrink: 0; /* Prevent items from shrinking */
+}
