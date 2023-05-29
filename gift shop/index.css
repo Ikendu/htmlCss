@@ -1,0 +1,24 @@
+.carousel-item{
+	height: 200px important;
+	background-color: #BEBFF1;
+}
+#a, #b, #c{
+
+}
+.d-block{
+	display: flex !important;
+}
+img{
+	width: 200px;
+	margin: 20px 50px;
+}
+.carousel-control-next-icon{
+	background-color: black;
+	position: relative;
+	left: 5px !important;
+}
+.carousel-control-prev-icon{
+	background-color: black;
+	position: relative;
+	left: -70px !important;
+}
