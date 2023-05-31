@@ -1,0 +1,14 @@
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+.header-space{
+	width: 100%;
+	height: 70px;
+	background-color: black;
+	display: block;
+}
+.icon{
+	height: 40px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}

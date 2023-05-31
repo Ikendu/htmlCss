@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Moving Object</title>
+  <style>
+    .obj {
+      position: absolute;
+      top: 10%;
+      left: 10px;
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      cursor: move;
+      display: flex;
+
+    }
+    .flash{
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="object" class="obj">
+    <div class="flash">
+      <img src="image/logo.jpg" class="icon" alt="logo" width="200px">
+    </div>
+    <div class="flash">
+      <img src="image/logo.jpg" class="icon" alt="logo" width="200px">
+    </div>
+    <div class="flash">
+      <img src="image/logo.jpg" class="icon" alt="logo" width="200px">
+    </div>
+    <div class="flash">
+      <img src="image/logo.jpg" class="icon" alt="logo" width="200px">
+    </div>
+    
+    
+    
+    
+
+  </div>
+
+  <script>
+    var object = document.getElementById('object');
+    var isMoving = true;
+
+    // Function to move the object across the screen
+    function moveObject() {
+      if (isMoving) {
+        var leftPos = parseInt(object.style.left) || 0;
+        if (leftPos >= window.innerWidth - 100) {
+          leftPos = 0;
+        } else {
+          leftPos += 3;
+        }
+        object.style.left = leftPos + 'px';
+        requestAnimationFrame(moveObject);
+      }
+    }
+
+    // Start moving the object
+    moveObject();
+
+    // Stop the object on hover
+    object.addEventListener('mouseenter', function() {
+      isMoving = false;
+    });
+
+    // Resume moving the object on mouse leave
+    object.addEventListener('mouseleave', function() {
+      isMoving = true;
+      moveObject();
+    });
+
+    // Dragging functionality
+    var offsetX, offsetY;
+
+    object.addEventListener('mousedown', function(e) {
+      offsetX = e.clientX - parseInt(object.style.left);
+      offsetY = e.clientY - parseInt(object.style.top);
+      document.addEventListener('mousemove', dragObject);
+      document.addEventListener('mouseup', stopDrag);
+    });
+
+    function dragObject(e) {
+      object.style.left = e.clientX - offsetX + 'px';
+      object.style.top = e.clientY - offsetY + 'px';
+    }
+
+    function stopDrag() {
+      document.removeEventListener('mousemove', dragObject);
+      document.removeEventListener('mouseup', stopDrag);
+    }
+  </script>
+</body>
+</html>

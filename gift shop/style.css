@@ -1,0 +1,154 @@
+*{
+	box-sizing: border-box !important;
+}
+body{
+	background-color: #C4BFC3 !important;
+}
+#button{
+	background-color: #837EF3;
+	color: white;
+}
+#front-page{
+	margin-top: -111px;
+}
+#logo{
+	border-radius: 35%;
+	padding: 0;
+}
+#navbar{
+	padding: 0;
+	background-color: #18146A;
+}
+#navbar-nav{
+	position: relative;
+	left: 35%;
+	color: #ADADAE !important;
+	background-color: #2A0305;
+}
+.nav-link{
+	color: #B4C9F9 !important;
+	padding-top: 5px !important;
+}
+.nav-link:hover{
+	color: #38F045 !important;
+	border-top: 2px solid red;
+}
+.name{
+	font-size: 30px;
+	font-weight: bold;
+	color: #C8B8B9;
+	margin-left: -15px;
+}
+/*h1{
+	font-family: 'Great Vibes', sans-serif;
+	position: relative !important;
+	left: -300px !important;
+	font-size: 120px !important;
+	display: flex; !important;
+}*/
+h1{
+	color: #BADFF0;
+}
+p{
+	color: #B2C3CB;
+}
+.hairs{
+	top: -180px;
+	font-size: 20px;
+	line-height: 30px;
+	color: #C0C0CB;	
+	padding: 8px 10%;
+	text-align: center;
+	width: 75%;
+	align-items: center;
+	border-top: 2px solid #B2C3CB;
+	border-bottom: 2px solid #B2C3CB;
+	border-radius: 5% 5% 5% 5%;
+	margin: auto;
+}
+.space1 .ceo{
+	text-align: center;
+	font-size: 16px;
+	font-style: italic;
+}
+.arivals{
+	height: 70px;
+	width: 50%;
+	background-color: #707072;
+	margin: -20px auto;
+	font-size: 20px;
+	text-align: center;
+	border-radius: 10px ;
+	padding: 5px;
+}
+@media screen and (max-width: 800px){
+	.arivals{
+		width: 80%;
+	}
+}
+@media screen and (max-width: 600px){
+	.arivals{
+		width: 97%;
+	}
+}
+
+.arivals p{	
+	color: #F5F5FC !important;
+}
+.icon-arrow-down{
+	color: #6F040B;
+}
+.link{
+	width: 100%;
+	background-color: #3C3C3E;
+	margin: 10px 0;
+	text-align: center;
+	margin-bottom: -20px;
+}
+.contacts{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-color: #193D27;
+	margin: 10px 0;
+	text-align: center;
+	padding: 10px;
+	font-size: 18px;
+}
+#social{	
+	padding: 10px;
+}
+#social, #social p {
+	width: 100%;
+	margin: auto;
+	text-align: center;
+} 
+#social p{
+	color: #1D2145;
+	font-size: 20px;
+}
+#social i{
+	font-size: 30px;
+	padding-left: 30px;
+}
+.icon-facebook-square{
+	color: #030B59;
+}
+.icon-whatsapp{
+	color: #09A158;
+}
+.icon-phone-square{
+	color: #094D06;
+}
+.icon-instagram{
+	color: #88095A;
+}
+footer{
+	width: 100%;
+	height: 150px;
+	background-color: #0E0A68;
+	text-align: center;
+	padding: 20px;
+}
+
+	
